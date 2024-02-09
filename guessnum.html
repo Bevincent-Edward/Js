@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Guess the Number</title>
+</head>
+<body>
+    <h1>Guess the Number</h1>
+    <input id="inp" type="number">
+    <button onclick="check()">Check</button>
+
+    <script>
+        var guessnum = document.getElementById("inp")
+        var randomnum = Math.floor(Math.random() * 10) + 1
+
+        function check() {
+            var userguess = guessnum.value
+
+            if (!isNaN(userguess)) {
+                if (userguess === randomnum) {
+                    alert("You are right");
+                } else {
+                    alert("You are wrong. The right answer is: " + randomnum);
+                }
+            } else {
+                alert("Please enter a valid number");
+            }
+        }
+        
+    </script>
+</body>
+</html>
